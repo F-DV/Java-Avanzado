@@ -1,6 +1,5 @@
 package org.example.ordenar_colecciones.comparator;
 
-import org.example.ordenar_colecciones.Persona;
 import org.example.ordenar_colecciones.comparator.NombreComparator;
 
 import java.util.*;

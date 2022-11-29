@@ -1,11 +1,7 @@
 package org.example.set.linkedHashSet;
 
-import org.example.set.hashset.PersonaLinkedHashSet;
-import org.example.set.treeset.PersonaTreeSet;
-
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class AppLinkedHashSet {
     public static void main(String[] args) {

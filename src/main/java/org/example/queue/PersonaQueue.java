@@ -1,14 +1,15 @@
-package org.example.set.hashset;
+package org.example.queue;
+
+
 
 import java.util.Objects;
 
-public class PersonaLinkedHashSet {
-
+public class PersonaQueue implements Comparable<PersonaQueue>{
     private int id;
     private String nombre;
     private int edad;
 
-    public PersonaLinkedHashSet(int id, String nombre, int edad) {
+    public PersonaQueue(int id, String nombre, int edad) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
@@ -38,11 +39,12 @@ public class PersonaLinkedHashSet {
         this.edad = edad;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PersonaLinkedHashSet that = (PersonaLinkedHashSet) o;
+        PersonaQueue that = (PersonaQueue) o;
         return id == that.id && edad == that.edad && Objects.equals(nombre, that.nombre);
     }
 
@@ -51,4 +53,17 @@ public class PersonaLinkedHashSet {
         return Objects.hash(id, nombre, edad);
     }
 
+    @Override
+    public String toString() {
+        return "PersonaMap{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                '}';
+    }
+
+    @Override
+    public int compareTo(PersonaQueue o) {
+        return this.edad - o.getEdad();
+    }
 }
